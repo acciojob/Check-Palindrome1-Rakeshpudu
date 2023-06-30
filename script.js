@@ -1,8 +1,11 @@
 // complete the given function
 
-function palindrome(str){
-let processedStr=str.toLowerCase().replace(/[^a-Z0-9]/g, '');
-	let reversedStr=processedStr.split('').reverse().join('');
-	return processedStr===reversedStr
+function palindrome(string){
+// 
+	// # Remove whitespace and convert to lowercase
+    string = string.replace(" ", "").lower()
+    
+   // # Compare the string with its reverse
+    return string == string[::-1]
 }
 module.exports = palindrome
