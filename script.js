@@ -1,11 +1,17 @@
 // complete the given function
 
-function palindrome(string){
-// 
-	// # Remove whitespace and convert to lowercase
-    string = string.replace(" ", "").lower()
-    
-   // # Compare the string with its reverse
-    return string == string[::-1]
+
+function palindrome(str){
+    let ch="" ;
+	str=str.toLowerCase();
+	for (let i = (str.length-1); i >=0 ; i--) {
+		ch+=str[i];
+	
+	}
+	if(ch==str){
+		return true;
+	}else{
+		return false;
+	}
 }
 module.exports = palindrome
